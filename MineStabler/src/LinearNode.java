@@ -27,7 +27,7 @@ public class LinearNode<T>
     }
     
     public void setElement(T elem){
-    element=elem;
+    element = elem;
     }
     
 }
