@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=EmptyCollectionException
+comment1.params=samling
+comment1.target=EmptyCollectionException(java.lang.String)
+comment1.text=\r\nUnntak\ med\ passende\ melding\r\n
+numComments=2

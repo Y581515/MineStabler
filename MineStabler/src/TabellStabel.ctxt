@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=TabellStabel
+comment1.params=
+comment1.target=TabellStabel()
+comment1.text=\r\n\ Oppretter\ en\ tom\ stabel.\r\n
+comment2.params=startKapasitet
+comment2.target=TabellStabel(int)
+comment2.text=\r\n\ Oppretter\ en\ tom\ stabel\ med\ en\ speisfisert\ kapasitet.\r\n
+comment3.params=element
+comment3.target=void\ push(java.lang.Object)
+comment3.text=\r\n\ Legger\ til\ det\ spesifiserte\ elementet\ p\u00E5\ toppen\ av\ stabelen,\ utvider\r\n\ kapasitetet\ til\ stabelen\ hvis\ n\u00F8dvendig.\r\n
+comment4.params=
+comment4.target=java.lang.Object\ pop()
+comment4.text=\r\n\ \r\n\ Fjerner\ toppelementet\ og\ returnerer\ en\ referanse\ til\ den.\ Hvis\ stabelen\r\n\ er\ tom\ fra\ f\u00F8r,\ s\u00E5\ returneres\ null\r\n
+comment5.params=
+comment5.target=java.lang.Object\ peek()
+comment5.text=\r\n\ Returnerer\ toppelementet\ uten\ \u00E5\ fjerne\ det.\ Hvis\ stabelen\ er\ tom\ fra\r\n\ f\u00F8r,\ s\u00E5\ returneres\ null\r\n
+comment6.params=
+comment6.target=boolean\ erTom()
+comment6.text=\r\n\ Returnerer\ sann\ hvis\ stabelen\ er\ tom\ og\ usann\ ellers.\r\n
+comment7.params=
+comment7.target=int\ antall()
+comment7.text=\r\n\ Returnerer\ antall\ elementer.\r\n
+comment8.params=
+comment8.target=void\ utvid()
+comment8.text=\r\n\ Oppretter\ en\ ny\ tabell\ for\ \u00E5\ lagre\ innholdet.\r\n
+numComments=9
