@@ -8,7 +8,7 @@ public class KjedetStabel<T> implements StabelADT<T> {
 		return topp;
 	}
 
-	public KjedetStabel() { // Kun en konstruktÃ¸r
+	public KjedetStabel() { // Kun en konstruktoor
 		topp = null;
 		antall = 0;
 	}
@@ -34,6 +34,16 @@ public class KjedetStabel<T> implements StabelADT<T> {
 		nynode.setNeste(topp); // 1
 		topp = nynode; // 2
 		antall++;
+
+	};
+
+	public void pushSeks(T e0, T e1, T e2, T e3, T e4, T e5) {
+		push(e0);
+		push(e1);
+		push(e2);
+		push(e3);
+		push(e4);
+		push(e5);
 
 	};
 
@@ -109,18 +119,20 @@ public class KjedetStabel<T> implements StabelADT<T> {
 			if (elem == topp.getElement()) {
 				pop();
 				Resultat++;
+				antall--;
 			}
 
 			else {
-				LinearNode<T> n = topp;
-				LinearNode<T> n1 = n.getNeste();
-				for (int i = 0; i < antall - 2 && !(n1.getElement().equals(elem)); i++) {
-					n = n.getNeste();
-					n1 = n1.getNeste();
+				LinearNode<T> f = topp;
+				LinearNode<T> denne = f.getNeste();
+				while (denne != null && !(denne.getElement().equals(elem))) {
+					f = denne;
+					denne = denne.getNeste();
 				}
-				if (n1.getElement().equals(elem)) {
-					n.setNeste(n1.getNeste());
+				if (denne != null) {
+					f.setNeste(denne.getNeste());
 					Resultat++;
+					antall--;
 				}
 			}
 
@@ -135,12 +147,12 @@ public class KjedetStabel<T> implements StabelADT<T> {
 		if (index == 0) {
 			push(elem);
 		} else {
-			LinearNode<T> n = topp;
+			LinearNode<T> f = topp;
 			for (int i = 0; i < index - 1; i++) {
-				n = n.getNeste();
+				f = f.getNeste();
 			}
-			node.setNeste(n.getNeste());
-			n.setNeste(node);
+			node.setNeste(f.getNeste());
+			f.setNeste(node);
 		}
 	}
 
@@ -148,15 +160,15 @@ public class KjedetStabel<T> implements StabelADT<T> {
 		if (index == 0) {
 			topp = topp.getNeste();
 		} else {
-			LinearNode<T> n = topp;
-			LinearNode<T> n1 = null;
+			LinearNode<T> f = topp;
+			LinearNode<T> denne = null;
 			for (int i = 0; i < index - 1; i++) {
-				n = n.getNeste();
+				f = f.getNeste();
 			}
-			n1 = n.getNeste();
-			n.setNeste(n1.getNeste());
+			denne = f.getNeste();
+			f.setNeste(denne.getNeste());
 			// System.out.println("n1 " + n1.data);
-			n1 = null;
+			denne = null;
 		}
 	}
 

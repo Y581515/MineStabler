@@ -7,9 +7,9 @@ public class TabellStabel<T> implements StabelADT<T> {
 	/*******************************************************************
 	 * Oppretter en tom stabel.
 	 *******************************************************************/
-	
+
 	public TabellStabel() {
-		this(STDK);		
+		this(STDK);
 	}
 
 	/*******************************************************************
@@ -35,14 +35,14 @@ public class TabellStabel<T> implements StabelADT<T> {
 
 	/*******************************************************************
 	 * 
-	 * Fjerner toppelementet og returnerer en referanse til den. Hvis stabelen
-	 * er tom fra før, så returneres null
+	 * Fjerner toppelementet og returnerer en referanse til den. Hvis stabelen er
+	 * tom fra før, så returneres null
 	 *******************************************************************/
 	@Override
 	public T pop() throws EmptyCollectionException {
-		if (erTom()){
-                    throw new EmptyCollectionException("stabel");
-                }
+		if (erTom()) {
+			throw new EmptyCollectionException("stabel");
+		}
 		topp--;
 		T result = stabel[topp];
 		stabel[topp] = null;
@@ -51,14 +51,14 @@ public class TabellStabel<T> implements StabelADT<T> {
 	}
 
 	/*******************************************************************
-	 * Returnerer toppelementet uten å fjerne det. Hvis stabelen er tom fra
-	 * før, så returneres null
+	 * Returnerer toppelementet uten å fjerne det. Hvis stabelen er tom fra før,
+	 * så returneres null
 	 *******************************************************************/
 	@Override
 	public T peek() throws EmptyCollectionException {
-		if (erTom()){
-                    throw new EmptyCollectionException("stabel");
-                }
+		if (erTom()) {
+			throw new EmptyCollectionException("stabel");
+		}
 		return stabel[topp - 1];
 	}
 
@@ -78,7 +78,6 @@ public class TabellStabel<T> implements StabelADT<T> {
 		return topp;
 	}
 
-	
 	/*******************************************************************
 	 * Oppretter en ny tabell for å lagre innholdet.
 	 *******************************************************************/
@@ -91,4 +90,3 @@ public class TabellStabel<T> implements StabelADT<T> {
 		stabel = hjelpeTabell;
 	}
 }
-
